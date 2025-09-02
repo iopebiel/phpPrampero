@@ -1,5 +1,6 @@
-Base: TOCC8
-create table cliente(
+Base: tocc8
+create table produto(
 codigo serial primary key,
-nome varchar(50),
-idade int);
+descricao varchar(50),
+preco double,
+qtde int);
