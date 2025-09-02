@@ -54,6 +54,7 @@ class Controlador {
                 'produto' => $produto,
                 'qtde' => $qtde
             ];
+            $this->alterar($codigo, $row['descricao'], $row['preco'], $row['qtde'] - $qtde);
             return true;
         }
         return false;
