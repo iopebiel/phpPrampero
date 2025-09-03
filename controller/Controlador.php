@@ -39,7 +39,6 @@ class Controlador {
     }
     public function remover($codigo) { $this->dao->remover($codigo); }
 
-    // Carrinho
     public function adicionarAoCarrinho($codigo, $qtde) {
         $resultado = $this->dao->buscar($codigo);
         $row = pg_fetch_assoc(result: $resultado);

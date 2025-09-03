@@ -13,7 +13,7 @@ $carrinho = $ctrl->getCarrinho();
         <tr><th>Descrição</th><th>Preço</th><th>Quantidade</th><th>Subtotal</th></tr>
         <?php foreach ($carrinho as $item): 
             $p = $item['produto'];
-            $sub = $p->getPreco() * $item['qtde']; //verificar com o Gebs a necessidade de transformar em objeto novamente
+            $sub = $p->getPreco() * $item['qtde'];
             ?>
             <tr>
             <td><?= $p->getDescricao() ?></td>

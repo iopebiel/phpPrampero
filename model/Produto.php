@@ -25,7 +25,7 @@ class Produto {
         return $this->descricao;
     }
     public function setPreco($p){
-        $this->preco=$p;//settype($p,"integer");
+        $this->preco=$p;
     }
     public function getPreco(){
         return $this->preco;
