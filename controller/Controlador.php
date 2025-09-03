@@ -3,7 +3,6 @@ require_once __DIR__ . '/ProdutoDAO.php';
 require_once __DIR__ .'/../model/Produto.php';
 session_start();
 
-
 class Controlador {
     private $dao;
 
