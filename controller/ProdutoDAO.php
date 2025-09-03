@@ -16,7 +16,7 @@ class ProdutoDAO
     public function listar()
     {
         $banco = new Banco();
-        $tabela = pg_query($banco->conexao, "Select * from produto order by 2 desc;");
+        $tabela = pg_query($banco->conexao, "Select * from produto order by codigo desc;");
         pg_close($banco->conexao);
         return $tabela;
     }

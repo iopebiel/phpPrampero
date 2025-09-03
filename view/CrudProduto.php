@@ -21,7 +21,7 @@ $produtos = $ctrl->listar();
 <form method="post">
     <input type="hidden" name="acao" value="inserir">
     Descrição: <input type="text" name="descricao" required>
-    Preço: <input type="number" name="preco" step="0.01" min="0" placeholder="R$ 0,00" required>
+    Preço: R$<input type="number" name="preco" step="0.01" min="0" value="<?= number_format(0, 2) ?>" required>
     Estoque: <input type="number" name="qtde"value="1" min="1" step="1" required>
     <button type="submit">Adicionar</button>
 </form>
@@ -34,7 +34,7 @@ $produtos = $ctrl->listar();
     <form method="post">
         <td><?= $p->getCodigo() ?></td>
         <td><input type="text" name="descricao" value="<?= $p->getDescricao() ?>"></td>
-        <td><input type="number" name="preco" step="0.01" min="0" value="<?= $p->getPreco() ?>"></td>
+        <td>R$<input type="number" name="preco" step="0.01" min="0" value="<?= $p->getPreco() ?>"></td>
         <td><input type="number" name="qtde" min="1" step="1"   value="<?= $p->getQtde() ?>"></td>
         <td>
             <input type="hidden" name="codigo" value="<?= $p->getCodigo() ?>">
