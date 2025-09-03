@@ -48,11 +48,12 @@ class Controlador {
                 $row['preco'],
                 $row['qtde']
             );
+            $this->alterar($codigo, $row['descricao'], $row['preco'], $row['qtde'] - $qtde);
+            $qtde = isset($_SESSION['carrinho'][$codigo]) ? $qtde + $_SESSION['carrinho'][$codigo]['qtde'] : $qtde;
             $_SESSION['carrinho'][$codigo] = [
                 'produto' => $produto,
                 'qtde' => $qtde
             ];
-            $this->alterar($codigo, $row['descricao'], $row['preco'], $row['qtde'] - $qtde);
             return true;
         }
         return false;
